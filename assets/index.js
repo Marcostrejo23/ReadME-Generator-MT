@@ -1,9 +1,14 @@
 // TODO: Include packages needed for this application
 const inquirer = require (`inquirer`);
 const fs = require (`fs`);
-const generate  = require ("./util/generateMarkdown");
+const generate  = require ("../utils/generateMarkdown.js");
+const generateMarkdown = require("../utils/generateMarkdown.js");
 // let generateMarkdown = require ();
-
+Function generateMarkdown(data, url){
+    console.log(data);
+    return '
+    '
+}
 // TODO: Create an array of questions for user input
 const questions = inquirer.prompt(
     [
@@ -29,7 +34,7 @@ const questions = inquirer.prompt(
         },
         {
             type: `input`,
-            message: `what are the instalation instructions?`,
+            message: `what are the installation instructions?`,
             name: `install`,
         },
         
@@ -69,7 +74,7 @@ function writeToFile(fileName, data) {
         if (err) {
           console.error("File was not created");
         } else {
-          console.log("README created succesfully");
+          console.log("README created successfully");
         }
       });
 }
