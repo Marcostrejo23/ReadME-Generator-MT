@@ -10,9 +10,13 @@ instructions:
 
 after cloning the repo and running npm i, run node index.js to begin the application. it will start by asking you questions about your application that once you complete it, it will generate a readme.md. The readme should be created in the generated folder. 
 
-Screenshot:
+Walkthrough:
 
-<img width="1020" alt="Screen Shot 2021-08-28 at 8 26 34 PM" src="https://user-images.githubusercontent.com/85652700/131237327-36717755-0635-49ce-9957-f7f6a030a560.png">
+
+
+https://user-images.githubusercontent.com/85652700/131237455-4b51075f-e9f6-4b95-9877-dbb8228bc5f9.mov
+
+
 
 
 License:
