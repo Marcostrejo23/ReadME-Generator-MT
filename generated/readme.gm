@@ -1,0 +1,22 @@
+# ReadME Generator
+ ## Description
+ $(description)
+##Table of contents
+-[Installation](#Installation)
+-[Usage](#Usage)
+-[Testing](#Testing)
+-[Contributing](#Contributing)
+-[Questions](#Questions)
+-[License](#License)
+##Installation
+clone this repo, run npm i, run node index.js, answer the questions, and the read me will be generated. 
+##Usage
+class assignment 
+##Testing
+
+##contributing
+Marcos Trejo
+##Questions
+[Github](https://github.com/Marcostrejo23)
+[Email](undefined)
+# License

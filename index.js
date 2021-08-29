@@ -1,25 +1,11 @@
-//
 const inquirer = require (`inquirer`);
 const fs = require (`fs`);
-const axios = require ("axios");
+const generate = require('./utils/generateMarkdown');
+const generateMarkdown = require('./utils/generateMarkdown');
 
-const api = {
-    apiCall(username) {
-        return axios.get('https://api.github.com/users/' + username)
-        .catch(error => {
-            console.error(error);
-        });
-    }
-}
 
-const writeFileAsync = util.promisify(fs.writeFile);
 
-module.exports = api;
-
-function userPrompt(){
-
-   return  inquirer.prompt(
-        [
+  const questions = [
             {
                 type: `input`,
                 message: `what's the name of your project?`,
@@ -57,21 +43,20 @@ function userPrompt(){
                 name: `test`,
             },
             
-        ]);
-    }
+        ];
+function writeToFile(fileName, data) {
+     fs.writeFile(fileName,data,function(err){
+        if(err){
+        throw err
+          }
+             console.log("File Written")
+     });
+}
 
     function init(){
-
-        userPrompt()
-
-        .then(function (data) {
-            api.apiCall(data.username)
-              .then(function (avatar) {
-                const url = (avatar.data.avatar_url)
-                console.log(data)
-                return writeFileAsync("TestREADME.md", generateMarkdown(data, url));
-              })
-          })
+     inquirer.prompt(questions).then(function (data){
+        writeToFile("readme.gm", generateMarkdown(data))
+     });
     }
 
     init();
